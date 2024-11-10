@@ -1,0 +1,356 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    background-color: #000000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 6vh;
+}
+
+.logo-area {
+    margin-left: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.logo-area a {
+    text-decoration: none;
+    font-size: large;
+    font-weight: bold;
+    color: #ee6f05;
+}
+
+.contents{
+  display: flex;
+}
+
+.profile{
+  margin-right: 10px;
+}
+
+.profile, .menu-btn {
+    border-radius: 10px;
+}
+
+.menu-btn {
+    background-color: #000000;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    color: #ee6f05;
+    font-size: 16px;
+}
+
+.contents {
+    margin-right: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.contents button {
+    padding: 7px;
+}
+
+main {
+    width: 100vw;
+    height: 94vh;
+    display: flex;
+    align-items: center;
+}
+
+.section1 {
+    height: 60vh;
+    width: 50vw;
+    background-color: rgb(0, 0, 0);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.search-area {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(0, 0, 0);
+    width: 300px;
+    padding: 10px;
+    border-radius: 25px;
+    border: 1px solid wheat;
+    color: wheat;
+}
+
+.search-area input {
+    background-color: transparent;
+    border: none;
+    flex: 1;
+    outline: none;
+    padding-left: 10px;
+    color: wheat;
+}
+
+.search-button {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    padding-right: 10px;
+}
+
+.section2 {
+    height: 34vh;
+    width: 50vw;
+    background-color: rgb(0, 0, 0);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; 
+    align-items: center;
+    overflow: hidden; 
+}
+#output{
+    height: 200px;
+    width: 90%;
+    background-color: black;
+    border: 1px solid wheat;
+}
+
+.section2-area {
+    font-size: 20px; 
+    margin-bottom: 3px;
+    overflow-y: auto; 
+    max-height: 100%;
+    padding: 10px; 
+    color: cadetblue; 
+    white-space: pre-wrap; 
+}
+
+.section3 {
+    height: 94vh;
+    width: 50vw;
+    background-color: rgb(0, 0, 0);
+    display: flex;
+    flex-direction: column;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+#language-select {
+    padding: 5px;
+    color: wheat;
+    background-color: black;
+    border: 1px solid wheat;
+}
+
+#run-button {
+    padding: 5px 10px;
+    color: wheat;
+    background-color: black;
+    border: 1px solid wheat;
+}
+
+#run-button:hover{
+    cursor: pointer;
+    background-color: wheat;
+    color: #000000;
+}
+
+#code-input {
+    flex: 1;
+    margin: 10px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    resize: none;
+    color: cadetblue;
+    background-color: black;
+    border: 1px solid wheat;
+}
+
+.video-container {
+    margin-top: 20px;
+    width: 100%;
+    height: 315px;
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+#youtube-video {
+    display: none;
+    border: 1px solid wheat;
+}
+
+#youtube-video[src] {
+    display: block;
+}
+
+
+.sliding-panel {
+    position: fixed;
+    top: 50px; 
+    right: 0;
+    width: 40%;
+    height: calc(100% - 50px); 
+    background-color: #000000;
+    box-shadow: -2px 0 10px rgba(0, 0, 0, 0.2);
+    transform: translateX(100%);
+    transition: transform 0.5s ease-in-out;
+    z-index: 999;
+    padding: 20px;
+    overflow-y: auto; 
+    color: wheat;
+}
+
+.sliding-panel.active {
+    transform: translateX(0);
+}
+
+
+.panel-nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    border-bottom: 2px solid wheat;
+    margin-bottom: 20px;
+    background-color: #000000;
+    position: sticky;
+    top: 0;
+    z-index: 1000; 
+}
+
+.panel-nav button {
+    background-color: #ff5722;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    color: white;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+
+.color-picker {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+    position: sticky;
+    top: 50px; 
+    background-color: #000000;
+    padding: 10px;
+    z-index: 999; 
+}
+
+.color-picker div {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+
+.color-1 { background-color: #FFA07A; }
+.color-2 { background-color: #FFEB3B; }
+.color-3 { background-color: #A5D6A7; }
+.color-4 { background-color: #FFCDD2; }
+.color-5 { background-color: #90CAF9; }
+
+
+.notes-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+
+.note {
+    background-color: #f8f8f8;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 8px;
+    position: relative;
+    box-sizing: border-box;
+    flex: 1 1 calc(50% - 20px);
+    min-height: 100px;
+    word-wrap: break-word; 
+}
+
+.note textarea {
+    width: 100%;
+    height: auto;
+    border: none;
+    background: none;
+    resize: none;
+    outline: none;
+    font-size: 16px;
+    overflow: hidden;
+}
+
+.note .date {
+    font-size: 12px;
+    color: #666;
+    text-align: right;
+}
+
+.note .delete-note {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    cursor: pointer;
+    font-size: 20px;
+    color: red;
+}
+
+
+.add-folder-btn, .add-note-btn {
+    background-color: #28a745;
+    border: none;
+    padding: 10px;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    display: block;
+    margin: 10px 0;
+}
+
+
+.folder {
+    background-color: #000000;
+    border: 1px solid wheat;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.folder-title {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.folder input {
+    width: auto;
+    font-size: 18px;
+    border: none;
+    background: none;
+    outline: none;
+}
+
+.rename-btn{
+    margin-left: 15rem;
+    margin-right: 2rem;
+}
